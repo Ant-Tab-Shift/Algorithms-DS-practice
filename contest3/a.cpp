@@ -39,11 +39,6 @@ int main() {
         treeNodes[treeNodes[nodeId].parentId].childrenIds.push_back(nodeId);
         treeNodes[nodeId].branchDepth = 0;
         
-        /*std::cout << "BAM BAM: ";
-        std::cout << treeNodes[treeNodes[nodeId].parentId].branchDepth;
-        std::cout << " ";
-        std::cout << treeNodes[nodeId].parentId << std::endl;*/
-        
         if (treeNodes[nodeId].depth > maxDepth) {
             maxDepth = treeNodes[nodeId].depth;
         }
@@ -57,13 +52,6 @@ int main() {
             updateParentBranchDepth(treeNodes, nodeId);
         }
     }
-    
-    
-    /*std::cout << std::endl;
-    for (int nodeId = 0; nodeId < treeSize - 1; nodeId++) {
-        std::cout << treeNodes[nodeId].branchDepth << " ";
-    }
-    std::cout << treeNodes[treeSize-1].branchDepth << std::endl;*/
     
 
     int maxDistance = 0;
@@ -86,17 +74,9 @@ int main() {
             }
         }
 
-        /*std::cout << std::endl;
-        std::cout << "HOHOL: ";
-        std::cout << maxDepth;
-        std::cout << " ";
-        std::cout << prevMaxDepth;
-        std::cout << " ";
-        std::cout << maxDepthId << std::endl;*/
         if (maxDepth + prevMaxDepth > maxDistance) {
             maxDistance = maxDepth + prevMaxDepth;
         }
-
         if (maxDistance < (maxDepth - 1) * 2) {
             nodeQueue.push(maxDepthId);
             if (maxDepth == prevMaxDepth) {
@@ -106,6 +86,7 @@ int main() {
         nodeQueue.pop();
     }
     std::cout << maxDistance << std::endl;
+
 
     for (int nodeId = 0; nodeId < treeSize - 1; nodeId++) {
         std::cout << treeNodes[nodeId].depth << " ";
