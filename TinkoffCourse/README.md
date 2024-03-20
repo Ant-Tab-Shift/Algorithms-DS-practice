@@ -32,8 +32,5 @@
 ## Подать заявку
 https://fintech.tinkoff.ru/academy/algorithms/
 
-## Записи семинаров (зима 2024)
-https://edu.tinkoff.ru/my-activities/courses/stream/2e8f9271-aaf1-481a-9606-c6c80456a024/program
-
 ## Главная страница курса (зима 2024)
 https://algocourses.ru/students2024/
